@@ -3,6 +3,11 @@ import React, { useState, FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import CloseIcon from './icons/CloseIcon';
 import { servicesContent } from '../content';
+import emailjs from '@emailjs/browser'; // Import emailjs
+
+// Initialize EmailJS with your Public Key
+// You'll need to replace "YOUR_PUBLIC_KEY" with your actual EmailJS Public Key
+emailjs.init("8QLkzSENTHEEZIkwz");
 
 interface ContactModalProps {
   onClose: () => void;
@@ -12,23 +17,33 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    service: 'General Inquiry',
+    service: '',
     budget: '',
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false); // New state for error handling
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-        onClose();
-    }, 3000); // Close after 3 seconds
+    setSubmitError(false); // Reset error state on new submission
+
+    try {
+      // Replace "YOUR_SERVICE_ID" and "YOUR_TEMPLATE_ID" with your actual EmailJS IDs
+      await emailjs.send("service_s3br4mult1m3d14", "template_mvbpnrs", formData);
+      console.log('SUCCESS!');
+      setSubmitted(true);
+      setTimeout(() => {
+          onClose();
+      }, 3000); // Close after 3 seconds
+    } catch (error) {
+      console.log('FAILED...', error);
+      setSubmitError(true); // Set error state if submission fails
+    }
   };
 
   return (
@@ -129,6 +144,9 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
                         >
                             Enviar Mensaje
                         </button>
+                        {submitError && (
+                          <p className="text-red-500 text-center mt-4">Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo.</p>
+                        )}
                     </form>
                 </>
             )}
