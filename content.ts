@@ -21,25 +21,25 @@ export const navigationContent = {
 };
 
 export const aboutContent = {
-  media: { type: 'animation', data: { src: 'https://files.catbox.moe/wzn24a.webm', alt: "Second Brain decorative graphic" } },
+  media: { type: 'animation', data: { src: 'https://files.catbox.moe/wzn24a.webm', alt: "Second Brain Animation Logo" } },
   mainTitle: "Nuestra Esencia",
-  introParagraph1: "En SeBra, fusionamos arte y código para redefinir los límites de la comunicación digital. No somos solo una agencia; somos un laboratorio de experiencias donde la estrategia se encuentra con la imaginación.",
-  introParagraph2: "Nacimos de la necesidad de contar historias que no solo se vean, sino que se sientan. En un mundo saturado de ruido, creamos señales claras, potentes y memorables que conectan marcas con personas a un nivel emocional profundo.",
+  introParagraph1: "En SeBra priorizamos el desarrollo y consolidación de tu identidad artística en el área creativa que te desenvuelvas, porque comprendemos que tu visión es fundamental para el desarrollo de tus obras.",
+  introParagraph2: "Es por eso que nos dedicamos a proporcionar apoyo, estructura, propuestas e inputs para tus creaciones, y,—a través de los distintos servicios que ofrecemos–, buscamos acompañarte en cada etapa de tu proceso, entregándote herramientas, perspectivas y orientación que enriquezcan tu trabajo y te permitan consolidar una identidad artística auténtica y sólida",
   
   mission: {
     title: "Misión",
-    text: "Empoderar a las marcas valientes a través de soluciones creativas innovadoras y tecnología de vanguardia, transformando desafíos complejos en experiencias digitales simples y extraordinarias."
+    text: "Nutrir la esencia creativa de cada artista, acompañándolo con apoyo profesional y propuestas enriquecedoras que impulsen su crecimiento. Buscamos que cada obra sea una manifestación genuina de su identidad y una afirmación de su visión única."
   },
   vision: {
     title: "Visión",
-    text: "Ser el referente global en diseño multimedia y experiencias inmersivas, liderando la evolución de cómo los humanos interactúan con el contenido digital en el metaverso y más allá."
+    text: "Aspiramos a construir un espacio donde cada artista pueda desarrollar su identidad creativa con libertad, confianza y profundidad, convirtiendo sus ideas en obras que reflejen su esencia y generen impacto personal y cultural."
   },
   values: {
     title: "Nuestros Valores",
     items: [
-      { title: "Audacia", desc: "Nos atrevemos a ir donde otros no." },
-      { title: "Excelencia", desc: "El detalle es nuestro lenguaje de amor." },
-      { title: "Simbiosis", desc: "Crecemos junto a nuestros clientes." }
+      { title: "Autenticidad Creativa", desc: "Creemos en el valor de una identidad artística propia." },
+      { title: "Acompañamiento Humano y Profesional", desc: "Acompañamos generando un entorno seguro para explorar y crecer creativamente." },
+      { title: "Exploración y Desarrollo Continuo", desc: "Fomentamos la búsqueda constante de nuevas perspectivas que enriquezcan la obra y la evolución del artista." }
     ]
   }
 };
