@@ -19,17 +19,11 @@ const Header: React.FC<HeaderProps> = ({ onContactClick, isVisible }) => {
              <a href={headerContent.socialLinks.instagram} aria-label="Instagram" className="text-gray-400 hover:text-white transition-colors duration-300 [&>svg]:w-5 [&>svg]:h-5 sm:[&>svg]:w-6 sm:[&>svg]:h-6">
                 <InstagramIcon />
             </a>
-            <a href={headerContent.socialLinks.behance} aria-label="Behance" className="text-gray-400 hover:text-white transition-colors duration-300 [&>svg]:w-5 [&>svg]:h-5 sm:[&>svg]:w-6 sm:[&>svg]:h-6">
-                <BehanceIcon />
-            </a>
-            <a href={headerContent.socialLinks.linkedin} aria-label="LinkedIn" className="text-gray-400 hover:text-white transition-colors duration-300 [&>svg]:w-5 [&>svg]:h-5 sm:[&>svg]:w-6 sm:[&>svg]:h-6">
-                <LinkedInIcon />
-            </a>
           </div>
 
           <div className="font-display text-lg sm:text-3xl font-bold tracking-wider w-1/3 text-center">
-            <span className="text-cyan-400">{headerContent.logoPrefix}</span>
-            <span className="text-white">{headerContent.logoSuffix}</span>
+            <span className="text-white-600">{headerContent.logoPrefix}</span>
+            <span className="text-cyan-400">{headerContent.logoSuffix}</span>
           </div>
           
           <div className="flex justify-end w-1/3">

@@ -5,9 +5,9 @@ export const headerContent = {
   logoPrefix: "Se",
   logoSuffix: "Bra",
   emailLink: "mailto:contact@sebra.com",
-  ctaText: "Get in Touch",
+  ctaText: "Contacto",
   socialLinks: {
-    instagram: "#",
+    instagram: "https://www.instagram.com/secondbrainmultimedia/",
     behance: "#",
     linkedin: "#"
   }
@@ -46,14 +46,14 @@ export const aboutContent = {
 
 export const teamContent = {
   intro: {
-    title: "Ingeniería de lo Imposible",
-    description: "Somos un colectivo híbrido de artistas, programadores y estrategas. No creemos en los silos departamentales; creemos en la fricción creativa que ocurre cuando disciplinas opuestas colisionan. Nuestro enfoque global combina la precisión suiza con la pasión latina, creando un entorno donde la experimentación no es solo bienvenida, es obligatoria."
+    title: "Un espacio para tu identidad artística",
+    description: "Somos un equipo interdisciplinario orientado a fortalecer procesos creativos auténticos. Unimos experiencia creativa, técnica y humana para acompañarte en cada etapa de tu desarrollo como artista. Conoce más sobre nosotros a continuación."
   },
   members: [
     {
       name: "Winters of Blue",
       role: "Producer & Musician",
-      subRole: "Co-Fundador, community manager, psicóloga, ",
+      subRole: "Co-Fundador, Community Manager, Psicóloga, ",
       image: { src: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: "Portrait of Winters of Blue, Producer & Musician" },
       linkedin: "https://www.linkedin.com"
     },
@@ -62,7 +62,7 @@ export const teamContent = {
       role: "Designer & Technical Artist",
       subRole: "Co-Fundador, Programmer, Artista 3D",
       image: { src: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: "Portrait of Angelo Cruz, Designer & Technical Artist" },
-      linkedin: "https://www.linkedin.com"
+      linkedin: "https://www.linkedin.com/in/ancrva/"
     }
   ]
 };

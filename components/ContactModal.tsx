@@ -83,7 +83,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ onClose }) => {
                           transition={{ delay: 0.2, duration: 0.5 }}
                           className="h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto mt-4 rounded-full shadow-[0_0_10px_rgba(34,211,238,0.5)]" 
                         />
-                        <p className="text-gray-400 mt-4 font-light">Completa el formulario y empecemos a crear algo increíble.</p>
+                        <p className="text-gray-400 mt-4 font-light">Completa el formulario para poder contactarnos contigo.</p>
                     </div>
                     
                     <form onSubmit={handleSubmit} className="space-y-4">

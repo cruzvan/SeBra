@@ -15,17 +15,17 @@ const HeroSection: React.FC = () => {
               className="block"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
-              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
               SECOND BRAIN
             </motion.span>
           </div>
           <div className="overflow-hidden">
             <motion.span 
-              className="block text-white" /* Pure white as requested */
+              className="block text-white" 
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
-              transition={{ duration: 1.2, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             >
               MULTIMEDIA
             </motion.span>
@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
         >
-          We don't just build websites. We engineer digital realities that captivate, convert, and inspire.
+          Construimos el universo visual, sonoro y estratégico que tu proyecto necesita.
         </motion.p>
       </div>
 
@@ -49,7 +49,7 @@ const HeroSection: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
       >
-        <span className="text-[10px] uppercase tracking-widest text-gray-500">Scroll to Explore</span>
+        <span className="text-[10px] uppercase tracking-widest text-gray-500">Desliza para explorar</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-cyan-500 to-transparent"></div>
       </motion.div>
     </section>
