@@ -1,11 +1,11 @@
 
 
 import React, { useState, FormEvent } from 'react';
-import { Service, ResponsiveImage as ResponsiveImageType } from '../types';
-import { servicesContent } from '../content';
+import { Service } from '../types';
 import CloseIcon from './icons/CloseIcon';
 import { motion } from 'framer-motion';
 import ResponsiveImage from './ResponsiveImage';
+import emailjs from '@emailjs/browser'; // Import emailjs
 
 interface ServiceModalProps {
   service: Service;
@@ -15,15 +15,33 @@ interface ServiceModalProps {
 const ServiceModal: React.FC<ServiceModalProps> = ({ service, onClose }) => {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false); // New state for error handling
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
+    setSubmitError(false);
+
+    const templateParams = {
+      user_email: email,
+      service_title: service.title,
+    };
+
+    try {
+      // NOTE: You might want to create a NEW template in EmailJS for this form
+      // and use its ID here. Use the same Service ID as before.
+      await emailjs.send('service_s3br4mult1m3d14', 'template_bcfwu0a', templateParams);
+      
+      setSubmitted(true);
+      setTimeout(() => {
         setSubmitted(false);
         setEmail('');
         onClose();
-    }, 3000);
+      }, 3000);
+
+    } catch (error) {
+      console.error('EmailJS send error:', error);
+      setSubmitError(true);
+    }
   };
   
   // Use the explicit images from the service object. Fallback for detailImage is mainImage.
@@ -148,6 +166,11 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ service, onClose }) => {
                                 Request Information
                             </button>
                         </form>
+                    )}
+                    {submitError && (
+                      <p className="text-red-500 text-center text-sm mt-2">
+                        Hubo un error al enviar tu solicitud. Inténtalo de nuevo.
+                      </p>
                     )}
                 </div>
             </div>
