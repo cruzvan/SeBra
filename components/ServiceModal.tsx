@@ -138,39 +138,62 @@ const ServiceModal: React.FC<ServiceModalProps> = ({ service, onClose }) => {
                 <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
                 
                 <div className="relative z-10 flex-grow flex flex-col justify-center">
-                    <h3 className="font-display text-xl mb-2 text-white">Interested?</h3>
-                    <p className="text-sm text-gray-500 font-mono mb-4">Let's discuss how we can bring this vision to life.</p>
-                    
-                    {submitted ? (
-                        <motion.div 
-                          initial={{ scale: 0.8, opacity: 0 }}
-                          animate={{ scale: 1, opacity: 1 }}
-                          className="text-center text-green-400 p-4 bg-green-900/10 rounded-xl border border-green-500/20 text-sm shadow-[0_0_15px_rgba(74,222,128,0.1)]"
+                    {service.title === "Obsidian Custom Database" ? (
+                      <div className="flex flex-col gap-3 h-full justify-center">
+                        <a 
+                          href="https://ko-fi.com/s/608c8f7cf0" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="w-full py-3 font-bold text-white bg-pink-500 rounded-xl hover:bg-pink-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-pink-500 transition-all duration-300 transform hover:scale-[1.02] shadow-[0_0_20px_rgba(236,72,153,0.3)] hover:shadow-[0_0_30px_rgba(236,72,153,0.5)] text-base text-center flex items-center justify-center"
                         >
-                            Request received! We'll be in touch soon.
-                        </motion.div>
+                          Comprar versión Lite
+                        </a>
+                        <a 
+                          href="https://forms.gle/9YCrZqGBW2HfZeL48" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="w-full py-3 font-bold text-black bg-cyan-400 rounded-xl hover:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-cyan-500 transition-all duration-300 transform hover:scale-[1.02] shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] text-base text-center flex items-center justify-center"
+                        >
+                          Rellenar cuestionario bóveda personalizada
+                        </a>
+                      </div>
                     ) : (
-                        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                            <input
-                                type="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Enter your email"
-                                required
-                                className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl focus:ring-1 focus:ring-cyan-500/50 focus:border-cyan-500/50 focus:shadow-[0_0_15px_rgba(34,211,238,0.1)] focus:outline-none transition-all text-white placeholder-gray-600 text-base"
-                            />
-                            <button
-                                type="submit"
-                                className="w-full py-3 font-bold text-black bg-cyan-400 rounded-xl hover:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-cyan-500 transition-all duration-300 transform hover:scale-[1.02] shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] text-base"
+                      <>
+                        <h3 className="font-display text-xl mb-2 text-white">Interested?</h3>
+                        <p className="text-sm text-gray-500 font-mono mb-4">Let's discuss how we can bring this vision to life.</p>
+                        
+                        {submitted ? (
+                            <motion.div 
+                              initial={{ scale: 0.8, opacity: 0 }}
+                              animate={{ scale: 1, opacity: 1 }}
+                              className="text-center text-green-400 p-4 bg-green-900/10 rounded-xl border border-green-500/20 text-sm shadow-[0_0_15px_rgba(74,222,128,0.1)]"
                             >
-                                Request Information
-                            </button>
-                        </form>
-                    )}
-                    {submitError && (
-                      <p className="text-red-500 text-center text-sm mt-2">
-                        Hubo un error al enviar tu solicitud. Inténtalo de nuevo.
-                      </p>
+                                Request received! We'll be in touch soon.
+                            </motion.div>
+                        ) : (
+                            <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                                <input
+                                    type="email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder="Enter your email"
+                                    required
+                                    className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-xl focus:ring-1 focus:ring-cyan-500/50 focus:border-cyan-500/50 focus:shadow-[0_0_15px_rgba(34,211,238,0.1)] focus:outline-none transition-all text-white placeholder-gray-600 text-base"
+                                />
+                                <button
+                                    type="submit"
+                                    className="w-full py-3 font-bold text-black bg-cyan-400 rounded-xl hover:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-cyan-500 transition-all duration-300 transform hover:scale-[1.02] shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] text-base"
+                                >
+                                    Request Information
+                                </button>
+                            </form>
+                        )}
+                        {submitError && (
+                          <p className="text-red-500 text-center text-sm mt-2">
+                            Hubo un error al enviar tu solicitud. Inténtalo de nuevo.
+                          </p>
+                        )}
+                      </>
                     )}
                 </div>
             </div>
