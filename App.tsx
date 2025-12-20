@@ -246,6 +246,22 @@ const App: React.FC = () => {
   const isBackgroundPaused = !!selectedService || !!selectedPost || !!selectedProject || isContactModalOpen;
   const showHero = !selectedPost && !selectedProject;
 
+  // --- THEME CONFIGURATION ---
+  const sectionThemes: Record<View, { color: string; bg: string; border: string; glow: string }> = {
+    Services: { color: 'text-cyan-400', bg: 'bg-cyan-950/40', border: 'border-cyan-500/30', glow: 'shadow-[0_0_30px_rgba(34,211,238,0.1)]' },
+    About: { color: 'text-violet-400', bg: 'bg-violet-950/40', border: 'border-violet-500/30', glow: 'shadow-[0_0_30px_rgba(167,139,250,0.1)]' },
+    Press: { color: 'text-pink-400', bg: 'bg-pink-950/40', border: 'border-pink-500/30', glow: 'shadow-[0_0_30px_rgba(244,114,182,0.1)]' },
+    Plans: { color: 'text-emerald-400', bg: 'bg-emerald-950/40', border: 'border-emerald-500/30', glow: 'shadow-[0_0_30px_rgba(52,211,153,0.1)]' },
+    Team: { color: 'text-amber-400', bg: 'bg-amber-950/40', border: 'border-amber-500/30', glow: 'shadow-[0_0_30px_rgba(251,191,36,0.1)]' },
+    FAQ: { color: 'text-blue-400', bg: 'bg-blue-950/40', border: 'border-blue-500/30', glow: 'shadow-[0_0_30px_rgba(96,165,250,0.1)]' },
+    PortfolioSe: { color: 'text-orange-400', bg: 'bg-orange-950/40', border: 'border-orange-500/30', glow: 'shadow-[0_0_30px_rgba(251,146,60,0.1)]' },
+    PortfolioBra: { color: 'text-fuchsia-400', bg: 'bg-fuchsia-950/40', border: 'border-fuchsia-500/30', glow: 'shadow-[0_0_30px_rgba(232,121,249,0.1)]' },
+    Privacy: { color: 'text-gray-400', bg: 'bg-gray-900/40', border: 'border-gray-500/30', glow: 'shadow-none' },
+    Terms: { color: 'text-gray-400', bg: 'bg-gray-900/40', border: 'border-gray-500/30', glow: 'shadow-none' },
+  };
+
+  const currentTheme = sectionThemes[activeView] || sectionThemes['Services'];
+
   return (
     <div className="min-h-screen bg-black text-gray-100 relative selection:bg-cyan-500/30">
 
@@ -260,20 +276,30 @@ const App: React.FC = () => {
         <div ref={contentRef} className={`relative min-h-screen transition-[padding] duration-300 ${showHero ? 'mt-[-15vh] md:mt-[-5vh]' : (isHeaderVisible ? 'pt-20' : 'pt-4')}`}>
 
           {showHero && (
-            <div className={`sticky z-40 w-full transition-all duration-300 overflow-hidden shadow-2xl ${isHeaderVisible ? 'top-20' : 'top-0'} ${isStuck ? 'rounded-none' : 'rounded-t-[3rem]'}`}>
+            <div className={`sticky z-40 w-full transition-all duration-500 ${isHeaderVisible ? 'top-20' : 'top-0'}`}>
 
-              <div className={`absolute inset-0 bg-black/80 md:bg-black/60 md:backdrop-blur-xl border-b border-white/5 transition-all duration-300 ${isStuck ? 'rounded-none' : 'rounded-t-[3rem]'}`}></div>
+              {/* Tab Container Background - visually connects to the folder body */}
+              <div
+                className={`absolute inset-0 backdrop-blur-xl transition-all duration-500 ${currentTheme.bg} ${isStuck ? 'rounded-none border-b border-white/10' : 'rounded-t-[2rem] border-t border-x border-white/10'}`}
+              ></div>
 
-              <div className="relative py-4 px-4 sm:px-6 flex justify-center">
+              <div className="relative py-2 px-2 sm:px-4 flex justify-center">
                 <div className="w-full max-w-[95%] 2xl:max-w-[2400px] mx-auto">
-                  <SubHeader activeView={activeView} onNavigate={handleNavigate} />
+                  <SubHeader activeView={activeView} onNavigate={handleNavigate} currentTheme={currentTheme} />
                 </div>
               </div>
             </div>
           )}
 
-          <div className={`bg-black/80 md:bg-black/60 md:backdrop-blur-xl min-h-screen flex flex-col ${showHero ? 'pt-8' : ''}`}>
-            <main className={`w-full max-w-[95%] 2xl:max-w-[2400px] mx-auto flex-grow ${showHero ? 'px-4 sm:px-6 md:px-8' : ''}`}>
+          <div className={`relative min-h-screen flex flex-col transition-colors duration-500 ${currentTheme.bg} ${showHero ? 'border-x border-b border-white/10 rounded-b-[2rem] mx-4 sm:mx-0' : ''}`}>
+
+            {/* Content Overlay / Glow */}
+            <div className={`absolute inset-0 pointer-events-none transition-all duration-500 ${currentTheme.glow} opacity-20`}></div>
+
+            {/* Deep Glass Effect */}
+            <div className="absolute inset-0 backdrop-blur-2xl z-[-1] rounded-b-[2rem]"></div>
+
+            <main className={`relative w-full max-w-[95%] 2xl:max-w-[2400px] mx-auto flex-grow px-4 sm:px-6 md:px-8 py-8`}>
               <AnimatePresence mode="wait">
                 <motion.div
                   key={selectedPost ? `post-${selectedPost.slug}` : selectedProject ? `project-${selectedProject.id}` : activeView}
