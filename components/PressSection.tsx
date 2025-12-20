@@ -43,8 +43,8 @@ const PressSection: React.FC<PressSectionProps> = ({ onSelectPost }) => {
             key={cat}
             onClick={() => setActiveCategory(cat)}
             className={`px-6 py-2 rounded-full text-xs font-mono uppercase tracking-widest transition-all duration-300 ${activeCategory === cat
-                ? 'bg-pink-500 text-white font-bold shadow-[0_0_20px_rgba(236,72,153,0.4)] scale-105'
-                : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/5'
+              ? 'bg-pink-500 text-white font-bold shadow-[0_0_20px_rgba(236,72,153,0.4)] scale-105'
+              : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/5'
               }`}
           >
             {cat}
@@ -77,7 +77,7 @@ const PressSection: React.FC<PressSectionProps> = ({ onSelectPost }) => {
                       className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110 md:filter md:grayscale md:group-hover:grayscale-0"
                     />
                     <div className="absolute top-3 left-3">
-                      <span className="bg-cyan-900/80 text-cyan-200 text-[10px] font-bold px-2 py-1 rounded-full md:backdrop-blur-md border border-cyan-500/20 shadow-lg">
+                      <span className="bg-pink-500 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-[0_0_15px_rgba(236,72,153,0.5)]">
                         {post.category}
                       </span>
                     </div>

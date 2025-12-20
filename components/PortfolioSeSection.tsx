@@ -45,8 +45,8 @@ const PortfolioSeSection: React.FC<PortfolioSeSectionProps> = ({ onSelectProject
             key={tag}
             onClick={() => setActiveTag(tag)}
             className={`px-6 py-2 rounded-full text-xs font-mono uppercase tracking-widest transition-all duration-300 ${activeTag === tag
-                ? 'bg-orange-500 text-black font-bold shadow-[0_0_20px_rgba(249,115,22,0.4)] scale-105'
-                : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/5'
+              ? 'bg-orange-500 text-black font-bold shadow-[0_0_20px_rgba(249,115,22,0.4)] scale-105'
+              : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/5'
               }`}
           >
             {tag}
@@ -76,7 +76,7 @@ const PortfolioSeSection: React.FC<PortfolioSeSectionProps> = ({ onSelectProject
                   />
                   <div className="absolute top-4 right-4 flex gap-2">
                     {p.tags.slice(0, 2).map(tag => (
-                      <span key={tag} className="bg-black/60 backdrop-blur-md text-white text-[10px] px-2 py-1 rounded-full font-mono uppercase">
+                      <span key={tag} className="bg-orange-500 text-black text-xs px-3 py-1 rounded-full font-bold shadow-lg">
                         {tag}
                       </span>
                     ))}
