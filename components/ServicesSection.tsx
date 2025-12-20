@@ -28,18 +28,15 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ onServiceSelect }) =>
 
     return (
         <div className="pt-4 pb-16">
-            <div className="flex flex-wrap justify-center gap-3 mb-10">
+            <div className="flex flex-wrap justify-center gap-2 mb-10">
                 {tags.map((tag) => (
                     <button
                         key={tag}
                         onClick={() => setActiveTag(tag)}
-                        className={`
-                            px-5 py-2 rounded-full text-xs font-mono uppercase tracking-widest border transition-all duration-300
-                            ${activeTag === tag
-                                ? 'bg-cyan-950/50 border-cyan-500 text-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.2)]'
-                                : 'bg-black/20 border-white/5 text-gray-500 hover:border-white/20 hover:text-gray-300 hover:bg-white/5'
-                            }
-                        `}
+                        className={`px-6 py-2 rounded-full text-xs font-mono uppercase tracking-widest transition-all duration-300 ${activeTag === tag
+                                ? 'bg-cyan-500 text-black font-semibold shadow-[0_0_20px_rgba(6,182,212,0.5)]'
+                                : 'bg-white/5 hover:bg-white/10 text-gray-400 border border-transparent'
+                            }`}
                     >
                         {tag}
                     </button>

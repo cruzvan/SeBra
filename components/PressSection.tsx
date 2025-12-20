@@ -37,20 +37,17 @@ const PressSection: React.FC<PressSectionProps> = ({ onSelectPost }) => {
     <div className="w-full px-4 py-8">
 
       {/* Category Filter Sub-Header */}
-      <div className="flex flex-wrap justify-center gap-3 mb-10">
-        {categories.map((category) => (
+      <div className="flex flex-wrap justify-center gap-2 mb-12">
+        {categories.map(cat => (
           <button
-            key={category}
-            onClick={() => setActiveCategory(category)}
-            className={`
-              px-5 py-2 rounded-full text-xs font-mono uppercase tracking-widest border transition-all duration-300
-              ${activeCategory === category
-                ? 'bg-cyan-950/50 border-cyan-500 text-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.2)]'
-                : 'bg-black/20 border-white/5 text-gray-500 hover:border-white/20 hover:text-gray-300 hover:bg-white/5'
-              }
-            `}
+            key={cat}
+            onClick={() => setActiveCategory(cat)}
+            className={`px-6 py-2 rounded-full text-xs font-mono uppercase tracking-widest transition-all duration-300 ${activeCategory === cat
+                ? 'bg-pink-500 text-white font-bold shadow-[0_0_20px_rgba(236,72,153,0.4)] scale-105'
+                : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/5'
+              }`}
           >
-            {category}
+            {cat}
           </button>
         ))}
       </div>

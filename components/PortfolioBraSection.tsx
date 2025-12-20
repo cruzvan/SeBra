@@ -43,10 +43,11 @@ const PortfolioBraSection: React.FC<PortfolioBraSectionProps> = ({ onSelectProje
           <button
             key={tag}
             onClick={() => setActiveTag(tag)}
-            className={`px-4 py-1 rounded-full text-xs font-mono uppercase tracking-widest transition-all duration-300 border ${activeTag === tag
-                ? 'bg-purple-500/20 border-purple-500 text-purple-300 shadow-[0_0_10px_rgba(168,85,247,0.3)]'
-                : 'bg-transparent border-white/10 text-gray-500 hover:border-white/30 hover:text-gray-300'
-              }`}
+            className={`px-6 py-2 rounded-full text-xs font-mono uppercase tracking-widest transition-all duration-300 ${
+                activeTag === tag 
+                ? 'bg-purple-500 text-white font-bold shadow-[0_0_20px_rgba(168,85,247,0.4)] scale-105' 
+                : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/5'
+            }`}
           >
             {tag}
           </button>
