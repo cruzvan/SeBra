@@ -49,7 +49,7 @@ const PricingSection: React.FC = () => {
     return (
         <div className="py-20 px-4">
             <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-display uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-400 mb-4">
+                <h2 className="text-xl sm:text-3xl md:text-5xl font-display uppercase tracking-tight md:tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-white to-cyan-400 mb-4">
                     Suscripciones
                 </h2>
                 <p className="text-xl text-gray-400 font-light">

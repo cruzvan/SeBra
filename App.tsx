@@ -279,27 +279,31 @@ const App: React.FC = () => {
             <div className={`sticky z-40 w-full transition-all duration-500 ${isHeaderVisible ? 'top-20' : 'top-0'}`}>
 
               {/* Tab Container Background - visually connects to the folder body */}
+              {/* Mobile Solid Blocker - Guarantees opacity */}
+              <div className="absolute inset-0 bg-black md:hidden"></div>
+
+              {/* Theme Tint & Blur Layer */}
               <div
-                className={`absolute inset-0 backdrop-blur-xl transition-all duration-500 ${currentTheme.bg} ${isStuck ? 'rounded-none border-b border-white/10' : 'rounded-t-[2rem] border-t border-x border-white/10'}`}
+                className={`absolute inset-0 md:backdrop-blur-xl backdrop-blur-none transition-all duration-500 ${currentTheme.bg} ${isStuck ? 'rounded-none border-b border-white/10' : 'rounded-none border-t border-white/10'}`}
               ></div>
 
-              <div className="relative py-2 px-2 sm:px-4 flex justify-center">
-                <div className="w-full max-w-[95%] 2xl:max-w-[2400px] mx-auto">
+              <div className="relative pt-2 pb-0 flex justify-center w-full">
+                <div className="w-full md:max-w-[95%] 2xl:max-w-[2400px] mx-auto">
                   <SubHeader activeView={activeView} onNavigate={handleNavigate} currentTheme={currentTheme} />
                 </div>
               </div>
             </div>
           )}
 
-          <div className={`relative min-h-screen flex flex-col transition-colors duration-500 ${currentTheme.bg} ${showHero ? 'border-x border-b border-white/10 rounded-b-[2rem] mx-4 sm:mx-0' : ''}`}>
+          <div className={`relative min-h-screen flex flex-col -mt-1 md:mt-0 transition-colors duration-500 ${currentTheme.bg} ${showHero ? 'border-t border-b border-white/10 rounded-none w-full' : ''}`}>
 
-            {/* Content Overlay / Glow */}
-            <div className={`absolute inset-0 pointer-events-none transition-all duration-500 ${currentTheme.glow} opacity-20`}></div>
+            {/* Content Overlay / Glow - Reduced intensity for performance */}
+            <div className={`absolute inset-0 pointer-events-none transition-all duration-500 ${currentTheme.glow} opacity-10 md:opacity-20`}></div>
 
-            {/* Deep Glass Effect */}
-            <div className="absolute inset-0 backdrop-blur-2xl z-[-1] rounded-b-[2rem]"></div>
+            {/* Deep Glass Effect - Blur disabled on mobile for performance */}
+            <div className="absolute inset-0 md:backdrop-blur-2xl backdrop-blur-none bg-[#050505]/95 md:bg-transparent z-[-1] rounded-none"></div>
 
-            <main className={`relative w-full max-w-[95%] 2xl:max-w-[2400px] mx-auto flex-grow px-4 sm:px-6 md:px-8 py-8`}>
+            <main className={`relative w-full md:max-w-[95%] 2xl:max-w-[2400px] mx-auto flex-grow px-4 sm:px-6 md:px-8 pt-0 pb-8 md:py-8`}>
               <AnimatePresence mode="wait">
                 <motion.div
                   key={selectedPost ? `post-${selectedPost.slug}` : selectedProject ? `project-${selectedProject.id}` : activeView}

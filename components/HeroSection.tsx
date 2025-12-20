@@ -6,12 +6,12 @@ const HeroSection: React.FC = () => {
   return (
     <section className="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
       <div className="container mx-auto px-4 relative z-10 text-center">
-        
+
         {/* Pill label removed */}
 
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-none tracking-tighter mb-8 shadow-black drop-shadow-2xl">
+        <h1 className="w-full max-w-[95vw] mx-auto font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-none tracking-tighter mb-8 shadow-black drop-shadow-2xl break-words whitespace-normal">
           <div className="overflow-hidden">
-            <motion.span 
+            <motion.span
               className="block"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -21,8 +21,8 @@ const HeroSection: React.FC = () => {
             </motion.span>
           </div>
           <div className="overflow-hidden">
-            <motion.span 
-              className="block text-white" 
+            <motion.span
+              className="block text-white"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
           </div>
         </h1>
 
-        <motion.p 
+        <motion.p
           className="max-w-xl mx-auto text-gray-300 text-lg md:text-xl font-light leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div 
+      <motion.div
         className="absolute bottom-40 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
