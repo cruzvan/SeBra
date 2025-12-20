@@ -265,7 +265,7 @@ const App: React.FC = () => {
               <div className={`absolute inset-0 bg-black/80 md:bg-black/60 md:backdrop-blur-xl border-b border-white/5 transition-all duration-300 ${isStuck ? 'rounded-none' : 'rounded-t-[3rem]'}`}></div>
 
               <div className="relative py-4 px-4 sm:px-6 flex justify-center">
-                <div className="container mx-auto">
+                <div className="w-full max-w-[95%] 2xl:max-w-[2400px] mx-auto">
                   <SubHeader activeView={activeView} onNavigate={handleNavigate} />
                 </div>
               </div>
@@ -273,7 +273,7 @@ const App: React.FC = () => {
           )}
 
           <div className={`bg-black/80 md:bg-black/60 md:backdrop-blur-xl min-h-screen flex flex-col ${showHero ? 'pt-8' : ''}`}>
-            <main className={`container mx-auto flex-grow ${showHero ? 'px-4 sm:px-6 md:px-8' : ''}`}>
+            <main className={`w-full max-w-[95%] 2xl:max-w-[2400px] mx-auto flex-grow ${showHero ? 'px-4 sm:px-6 md:px-8' : ''}`}>
               <AnimatePresence mode="wait">
                 <motion.div
                   key={selectedPost ? `post-${selectedPost.slug}` : selectedProject ? `project-${selectedProject.id}` : activeView}
