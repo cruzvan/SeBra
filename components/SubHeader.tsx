@@ -12,6 +12,7 @@ const SubHeader: React.FC<SubHeaderProps> = ({ activeView, onNavigate }) => {
     { label: navigationContent.about, view: 'About' },
     { label: navigationContent.services, view: 'Services' },
     { label: navigationContent.press, view: 'Press' },
+    { label: "Planes", view: 'Plans' },
     { label: navigationContent.team, view: 'Team' },
   ];
 
@@ -21,11 +22,10 @@ const SubHeader: React.FC<SubHeaderProps> = ({ activeView, onNavigate }) => {
         <button
           key={item.view}
           onClick={() => onNavigate(item.view)}
-          className={`font-display tracking-widest uppercase transition-all duration-300 ease-in-out transform hover:scale-105 sm:hover:scale-110 ${
-            activeView === item.view
-              ? 'text-cyan-400 sm:scale-110' 
-              : 'text-gray-500 hover:text-gray-200'
-          } 
+          className={`font-display tracking-widest uppercase transition-all duration-300 ease-in-out transform hover:scale-105 sm:hover:scale-110 ${activeView === item.view
+            ? 'text-cyan-400 sm:scale-110'
+            : 'text-gray-500 hover:text-gray-200'
+            } 
           text-[10px] sm:text-xs md:text-xl whitespace-nowrap
           `}
         >

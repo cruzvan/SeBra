@@ -25,7 +25,7 @@ export const aboutContent = {
   mainTitle: "Nuestra Esencia",
   introParagraph1: "En SeBra priorizamos el desarrollo y consolidación de tu identidad artística en el área creativa que te desenvuelvas, porque comprendemos que tu visión es fundamental para el desarrollo de tus obras.",
   introParagraph2: "Es por eso que nos dedicamos a proporcionar apoyo, estructura, propuestas e inputs para tus creaciones, y,—a través de los distintos servicios que ofrecemos–, buscamos acompañarte en cada etapa de tu proceso, entregándote herramientas, perspectivas y orientación que enriquezcan tu trabajo y te permitan consolidar una identidad artística auténtica y sólida",
-  
+
   mission: {
     title: "Misión",
     text: "Nutrir la esencia creativa de cada artista, acompañándolo con apoyo profesional y propuestas enriquecedoras que impulsen su crecimiento. Buscamos que cada obra sea una manifestación genuina de su identidad y una afirmación de su visión única."
@@ -235,10 +235,10 @@ export const servicesContent: Service[] = [
 
 // Portfolio Data
 export const portfolioSeContent: PortfolioProject[] = [
-  { 
-    id: 1, 
-    title: "Neon Genesis", 
-    category: "Art Direction", 
+  {
+    id: 1,
+    title: "Neon Genesis",
+    category: "Art Direction",
     tags: ["Dirección de Arte", "Concept Art"],
     image: { src: 'https://images.pexels.com/photos/2131969/pexels-photo-2131969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: 'Neon-lit futuristic city street' },
     content: `
@@ -258,10 +258,10 @@ export const portfolioSeContent: PortfolioProject[] = [
       <p>El resultado final se utilizó en campañas de redes sociales y vallas publicitarias digitales en Tokio y Seúl.</p>
     `
   },
-  { 
-    id: 2, 
-    title: "Void Walker", 
-    category: "Visual Strategy", 
+  {
+    id: 2,
+    title: "Void Walker",
+    category: "Visual Strategy",
     tags: ["Estrategia Visual", "Branding"],
     image: { src: 'https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: 'Abstract swirling dark matter' },
     content: `
@@ -270,10 +270,10 @@ export const portfolioSeContent: PortfolioProject[] = [
       <img src="https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Void Walker Branding" />
     `
   },
-  { 
-    id: 3, 
-    title: "Cyber Punk Identity", 
-    category: "Branding", 
+  {
+    id: 3,
+    title: "Cyber Punk Identity",
+    category: "Branding",
     tags: ["Branding", "Diseño Gráfico"],
     image: { src: 'https://images.pexels.com/photos/3828038/pexels-photo-3828038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: 'Holographic cyberpunk branding design' },
     content: `
@@ -283,10 +283,10 @@ export const portfolioSeContent: PortfolioProject[] = [
       <img src="https://images.pexels.com/photos/1578351/pexels-photo-1578351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Esports Branding" />
     `
   },
-  { 
-    id: 4, 
-    title: "Abstract Flow", 
-    category: "Motion", 
+  {
+    id: 4,
+    title: "Abstract Flow",
+    category: "Motion",
     tags: ["Motion Graphics", "3D"],
     image: { src: 'https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: 'Colorful abstract liquid flows' },
     content: `
@@ -298,10 +298,10 @@ export const portfolioSeContent: PortfolioProject[] = [
 ];
 
 export const portfolioBraContent: PortfolioProject[] = [
-  { 
-    id: 1, 
-    title: "Quantum Core", 
-    category: "WebGL Development", 
+  {
+    id: 1,
+    title: "Quantum Core",
+    category: "WebGL Development",
     tags: ["WebGL", "Three.js"],
     image: { src: 'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: '3D render of a quantum computer core' },
     content: `
@@ -311,10 +311,10 @@ export const portfolioBraContent: PortfolioProject[] = [
       <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Quantum Core" />
     `
   },
-  { 
-    id: 2, 
-    title: "Neural Interface", 
-    category: "Creative Coding", 
+  {
+    id: 2,
+    title: "Neural Interface",
+    category: "Creative Coding",
     tags: ["Creative Coding", "AI"],
     image: { src: 'https://images.pexels.com/photos/5474028/pexels-photo-5474028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: 'Digital representation of a neural network' },
     content: `
@@ -323,10 +323,10 @@ export const portfolioBraContent: PortfolioProject[] = [
       <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Neural UI" />
     `
   },
-  { 
-    id: 3, 
-    title: "Data Sculpture", 
-    category: "Generative Art", 
+  {
+    id: 3,
+    title: "Data Sculpture",
+    category: "Generative Art",
     tags: ["Generative Art", "Data Viz"],
     image: { src: 'https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: '3D generative art data sculpture' },
     content: `
@@ -336,10 +336,10 @@ export const portfolioBraContent: PortfolioProject[] = [
       <img src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Data Art" />
     `
   },
-  { 
-    id: 4, 
-    title: "System Architecture", 
-    category: "Full Stack", 
+  {
+    id: 4,
+    title: "System Architecture",
+    category: "Full Stack",
     tags: ["Backend", "Arquitectura"],
     image: { src: 'https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', alt: 'Diagram of a complex server architecture' },
     content: `
@@ -395,3 +395,51 @@ export const legalContent = {
     `
   }
 };
+
+export const plansContent: import('./types').SubscriptionPlan[] = [
+  {
+    name: "Lite",
+    price: "50.000",
+    color: "emerald", // Using emerald/teal for the green
+    features: [
+      { text: "Asesoría en Redes Sociales" },
+      { text: "Creación de contenido y guiones (2 guiones semanales)" },
+      { text: "Directrices para publicación y feedback basado en estadísticas" }
+    ]
+  },
+  {
+    name: "Standard",
+    price: "90.000",
+    color: "purple",
+    features: [
+      { text: "Asesoría en Redes Sociales" },
+      { text: "Creación de contenido y guiones (2 guiones semanales)" },
+      { text: "Directrices para publicación y feedback basado en estadísticas" },
+      { text: "Notas de Prensa", isHighlighted: true },
+      { text: "Creación One Sheet", isHighlighted: true },
+      { text: "Creación y actualización de dossier", isHighlighted: true },
+      { text: "Apoyo para lanzamientos y planes de trabajo", isHighlighted: true },
+      { text: "1 Reunión semanal de avances", isHighlighted: true },
+      { text: "Creación de Spotify Canvas para lanzamientos", isHighlighted: true }
+    ]
+  },
+  {
+    name: "Premium",
+    price: "150.000",
+    color: "orange",
+    features: [
+      { text: "Asesoría en Redes Sociales" },
+      { text: "Creación de contenido y guiones (2 guiones semanales)" },
+      { text: "Directrices para publicación y feedback basado en estadísticas" },
+      { text: "Notas de Prensa" },
+      { text: "Creación One Sheet" },
+      { text: "Creación y actualización de dossier" },
+      { text: "Apoyo para lanzamientos y planes de trabajo" },
+      { text: "1 Reunión semanal de avances" },
+      { text: "Creación de Spotify Canvas para lanzamientos" },
+      { text: "Servicios de representación y management", isHighlighted: true },
+      { text: "Subir contenido a las plataformas de streaming musical con distribuidores", isHighlighted: true },
+      { text: "Revisión de estadísticas mensuales y planes de acción de mejora", isHighlighted: true }
+    ]
+  }
+];

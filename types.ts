@@ -37,3 +37,15 @@ export interface PortfolioProject {
   image: ResponsiveImage;
   content: string; // HTML details
 }
+
+export interface SubscriptionFeature {
+  text: string;
+  isHighlighted?: boolean;
+}
+
+export interface SubscriptionPlan {
+  name: string;
+  price: string;
+  color: string; // Tailwind color class prefix (e.g., 'cyan', 'purple', 'orange')
+  features: SubscriptionFeature[];
+}
